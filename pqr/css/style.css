@@ -1,13 +1,13 @@
 @font-face {
     font-family: 'Walbaum';
-    src:url("../ressources/polices/Walbaum10Pro/Walbaum10Pro.otf");
+    src:url("../../ressources/polices/Roboto-Black.ttf");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'WalbaumgrotBook';
-    src:url("../ressources/polices/Walbaumgroteskbook/WalbaumGroteskBook.otf");
+    src:url("../../ressources/polices/Roboto-Light.ttf");
     font-weight: 300;
     font-style: normal;
     
