@@ -219,7 +219,6 @@ function calc(dataset){
 				}else if (liste[0]){
 					for(p=0;p<liste.length;p++){	
 						var id = liste[p];
-						console.log(id)
 						listeDept["d"+id][0] ++; //nombre de quotidiens par département
 					}
 				}
@@ -1506,7 +1505,6 @@ function majPage() {
 //Mise à jour de la carte en fonction de la date
 function majCarte(dataset, dataVille) {
 	buildGraph(date);
-	console.log(listeVilles);
 	d3.select("body").selectAll(".item").remove();
 	calc(dataset);
 	var it = 0;
@@ -1998,7 +1996,6 @@ function hoverVille(obj) {
 	}
 	if(obj.attributes.entites){
 		var entite = obj.attributes.entites.value;
-		console.log(entite);
 		var liste = entite.split(",");
 		for (i=0;i<liste.length;i++){
 			d3.select("#d"+liste[i])
