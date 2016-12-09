@@ -1,0 +1,241 @@
+@font-face {
+    font-family: 'Walbaum';
+    src:url("../ressources/polices/Walbaum10Pro/Walbaum10Pro.otf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'WalbaumgrotBook';
+    src:url("../ressources/polices/Walbaumgroteskbook/WalbaumGroteskBook.otf");
+    font-weight: 300;
+    font-style: normal;
+    
+}
+
+body{
+	font-family: 'WalbaumgrotBook',  helvetica, arial, sans-serif;
+}
+
+
+.sscadre{
+	position : relative;
+
+}
+
+h1{
+	text-align : center;
+	font-size : 28px;
+	margin-top:10px;
+	margin-bottom: 10px;
+	font-weight: 800;
+	color : red;
+	margin-left : -70px;
+}
+
+.boutons{
+	padding-left : 0px;
+	border: 0;
+	border-radius: 15px;
+	padding: 5px 7px;
+	background: #f6e9d9;
+	color: #333333;
+	transition-duration:.2s;
+	transition-property: background;
+	-moz-transition-duration:.2s;
+	-moz-transition-property: background;
+	-webkit-transition-duration:.2s;
+	-webkit-transition-property: background;
+	font-size : 14px;
+	line-height : 15px;
+	z-index : 2;
+}
+
+.boutons:hover{
+	background: #be2e0d ;
+	color: #ffffff ;
+	cursor:pointer;
+}
+
+.off{
+	background: #333333 !important;
+	color: #ffffff !important;
+	cursor : default !important;
+}
+
+#ancien{
+	margin-left : 230px;
+}
+
+#apres{
+	margin-left : 452px;
+}
+
+#fin{
+	margin-left : 497px;
+}
+
+#expl,#expl2{
+	text-align : center;
+	margin-left : -70px;
+	font-size : 12px;
+}
+
+#expl2{
+	margin-left : 200px;
+	margin-top : 300px;
+	position : absolute;
+}
+
+#conteneur{
+	width : 1000px;
+	position:absolute;
+}
+
+#head{
+	display : flex;
+}
+
+#infos, #infos2{
+	width : 180px;
+}
+#notes{
+	font-size : 12px;
+}
+#sources{
+	font-size : 12px;
+	width : 360px;
+}
+#chCarte, #chSecteur{
+	position : absolute;
+}
+
+.infoType{
+	height : 250px;
+	overflow : auto;
+	width : 150px;
+	padding-left : 0px;
+	border-radius: 15px;
+	padding: 5px 7px;
+	border-color: #f6e9d9;
+	border-width : 1px;
+	border-style : solid;
+	color: #333333;
+	font-family: Walbaum, helvetica, arial, sans-serif;
+	font-size : 14px;	
+}
+
+#liste_fusion{
+	height : 165px;
+}
+
+#liste_cesse{
+	height : 335px;
+}
+
+#liste_ville{
+	height : 200px;
+}
+
+h2{
+	font-size : 14px;
+	text-align: center;
+	margin-bottom : 5px;
+	margin-top : 15px;
+}
+
+.infoType, h2{
+	background-color : #FFFFFF;
+}
+
+.item{
+	font-size : 11px;
+	margin : 0px;
+	padding:0px;
+}
+
+.item:hover{
+	font-size : 13px;
+	font-weight: bold;
+	cursor : help;
+}
+
+.barres:hover{
+	cursor : pointer;
+	opacity : 1;
+}
+
+#divcarte{
+}
+
+#fondTexte{
+	overflow : hidden;
+	width : 90%;
+	height : 650px;
+	display : flex;
+	position:absolute;
+	z-index : -1;
+}
+
+.cadre{
+	position:absolute;
+	width : 90%;
+	height : 550px;
+}
+
+#svgrange{
+	overflow: visible;
+	position : absolute;
+}
+
+.colonne{
+	width : 150px;
+	margin-left : 20px;
+	opacity : 0.05;
+	text-align: justify;
+    text-justify: inter-word;
+    font-size : 6px;
+	font-family : 'Walbaum', helvetica;
+	font-weight : 100;
+}
+
+
+
+#inter{
+	border-radius : 300px;
+	width : 800px;
+	height : 430px;	
+}
+
+#range{
+	display : flex;
+	margin-left : 150px;
+	margin-top : 250px;
+	overflow : hidden;
+}
+
+#inter2{
+	width:1000px;
+	height:600px;
+	margin-top:320px;
+}
+#inter,#inter2{
+	position : absolute;
+}
+#indDate{
+	margin-left : 150px;
+	position : absolute;
+
+}
+
+#indDate{
+	font-size : 18px;
+	color : #3C5E48;
+}	
+.contentInfo{
+	width : 180px;
+	overflow : visible;
+}
+.titreliste{
+	width : 180px;
+}
