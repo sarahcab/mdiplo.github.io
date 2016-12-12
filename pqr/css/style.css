@@ -18,9 +18,13 @@ body{
 }
 
 
+.cadre{
+	height : 100.5%;
+	overflow : hidden;
+
+}
 .sscadre{
 	position : relative;
-
 }
 
 h1{
@@ -177,11 +181,6 @@ h2{
 	z-index : -1;
 }
 
-.cadre{
-	position:absolute;
-	width : 90%;
-	height : 550px;
-}
 
 #svgrange{
 	overflow: visible;
