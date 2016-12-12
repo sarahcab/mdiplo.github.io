@@ -366,6 +366,13 @@ function modeDatePrec(){
 	d3.select("#carte").selectAll(".labDouble").style("display","none")
 	d3.select("#carte").selectAll(".labSimple").attr("fill",nuancier[1])
 	d3.select("#carte").selectAll(".labSimple").attr("opacity",0.7)
+	
+	window.onscroll = function(){
+		window.scrollTo(0,0)
+		date ++;
+		//console.log(date)
+		afficheEvol();
+	}
 }
 
 
@@ -1857,8 +1864,9 @@ function majCarte(dataset, dataVille) {
 		return this.attributes.fill.value;
 	})
 	
-
+	if(mode=="compare"){
 		date = ancDate;
+	}
 	//ancDate = date;
 	// var x = document.getElementById("masque").attributes.largeur.value;
 	
