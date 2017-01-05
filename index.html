@@ -1,2 +1,116 @@
-<h1>Le Monde diplomatique</h1>
-<small>Sur Github</small>
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Le Monde diplomatique</title>
+	<style type="text/css">
+		body{
+			color: #657b83;
+			background-color: #fff5f0;
+		}
+		a {
+		    color: #93a1a1;
+		}
+		.entete {
+		    display: flex;
+		    justify-content: center;
+		}
+		.entete > a {
+		    text-decoration: none;
+		}
+		.entete .titre {
+		    color: #be2e0d;
+		}
+		.titre {
+		    font-weight: 700;
+		}
+		.titre > .petit {
+		    font-size: 1.5rem;
+		    line-height: 1.2rem;
+		    padding-left: 0.5ex;
+		}
+		.titre > .gros {
+		    line-height: 3.8rem;
+		 	font-size: 3.8rem;
+		}
+		.titre > .small-caps {
+		    font-variant: small-caps;
+		}
+		.titre > .recule {
+		    position: relative;
+    		right: 1.6em;
+			font-style: italic;
+		 	font-size: 5.5rem;
+		}
+		
+		.column-main {
+		    margin-left: auto;
+		    margin-right: auto;
+		    max-width: 60rem;
+		}
+
+		.credits {
+		    border-top: 2px solid #eee8d5;
+		    padding: 0.75rem;
+		    text-align: center;
+		}
+		
+		.sh {
+		    margin-bottom: 2.8rem;
+		    margin-top: 0.8rem;
+		    padding: 1rem;
+		    position: relative;
+		    background-color: #073642;
+		}
+		
+		pre, code {
+		    display: block;
+		    margin: 0;
+			padding:0;
+		}
+		pre {
+			line-height:0.5em;
+		}
+		code {
+		    color: #839496;
+		  	font-family: "Menlo","Monaco",monospace;
+		    font-size: 16px;
+		    text-align: left;
+		}
+		pre > code::before, .sh > code::before {
+		    content: "$ ";
+		}
+	</style>
+</head>
+<body>
+
+    <header>
+        <div class="entete">
+            <a href="https://github.com/mdiplo">
+                <h1 class="titre">
+                    <span class="petit">Le</span><br>
+                    <span class="gros">M</span><span class="gros small-caps">onde</span><br /><span class="gros recule">diplomatique</span>
+                </h1>
+            </a>
+        </div>
+    </header>
+
+    <div class="page">
+
+            <section class="column-main">
+            	<div class="sh">
+                	<pre>
+						<code>echo "Hello world."</code>
+					</pre>
+            	</div>
+            </section>
+
+    </div>
+
+    <footer>
+        <div class="credits column-main">
+            Page Github du Monde diplomatique. <a href="http://www.monde-diplomatique.fr/diplo/apropos/">Qui sommes-nous ?</a>
+        </div>
+    </footer>
+</body>
+</html>
