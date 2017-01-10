@@ -12,27 +12,24 @@ function initialize() {
 	var bout_l = document.getElementById("bouton_l"); //bouton "ok" qui confirme la lecture des règles
 	
 	var etape = 0; //variable de temps initalement à 0
+	d3.select("#content").style("display", "block").style("opacity", 1); //apparition de l'infographie
+	d3.select("#fonds").selectAll("g").transition().duration(1500).attr("opacity",0.2); //apparition des fonds en coloré en transparence
+	d3.select("body").selectAll(".pli").style("transform","translate(-30px)"); // décalage des fonds de droite pour enlever l'espace du pli
 	
 	bout_0.onclick = function(){
 		this.style.display = "none"; 
-		d3.select("#fond_gris").transition().duration(1500).style("opacity","0"); //disparition progressive de l'image par défaut
-		setTimeout(function(){
-			d3.select("#content").style("display", "block").style("opacity", 1); //apparition de l'infographie
-			d3.select("#fonds").selectAll("g").transition().duration(1500).attr("opacity",0.2); //apparition des fonds en coloré en transparence
-			d3.select("body").selectAll(".pli").style("transform","translate(-30px)"); // décalage des fonds de droite pour enlever l'espace du pli
-			d3.select("#rules").style("display","block") //apparition des règles
-		},500);
+		d3.select("#rules").style("display","block") //apparition des règles
 	}
 	
 	bout_l.onclick = function(){
 		d3.select("#fond_gris").style("display","none"); //disparition complète de l'image par défaut
 		d3.select("#avancer").style("display","inline"); //apparition du bouton "continuer"
 		//décalage des règle :
-		d3.select("#rules").transition().duration(1000).style("margin-left","780px").style("margin-top","-100px").style("font-size", "12px").selectAll("p").style("margin","2px");
+		d3.select("#rules").transition().duration(1000).style("margin-left","65%").style("margin-top","-2%").style("font-size", "12px").selectAll("p").style("margin","2px");
 		d3.select("#rules").selectAll("img").transition().duration(1000).style("width","15px"); //réduction de la police des règles
 		d3.select("#bouton_l").transition().duration(1000).style("opacity","0"); //disparition progressive du bouton ok
 		d3.select("#bouton_l").transition().delay(1000).style("display","none"); //disparition totale du bouton ok
-		
+		d3.select("#intro").transition().duration(1000).attr("opacity",1)
 	}
 	
 	init.onclick = function(){
