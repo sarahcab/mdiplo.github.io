@@ -159,7 +159,9 @@ function reseet() {
 					var centre = this.attributes.centre.value;
 					return "translate(-"+centre+") scale(2)";
 				})	
-			
+			d3.select("#b"+i+"_clone")
+				.attr("opacity",1)
+				
 			d3.select("#anime")
 				.selectAll(".appar"+i)
 				.attr("opacity",0)
