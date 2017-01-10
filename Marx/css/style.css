@@ -1,0 +1,150 @@
+@font-face {
+    font-family: 'WalbaumgrotBook';
+   src:url("../../ressources/polices/Roboto-Light.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+body{
+	font-family: WalbaumgrotBook, helvetica, arial, sans-serif;
+	display : flex;
+}
+/* 	filter : blur(0.5px);
+}
+
+body:hover{
+	filter : none;
+}
+ */
+.elt:hover{
+	cursor : pointer;
+	opacity : 0.4;
+}
+
+.oclik1:hover,.oclik2:hover,.oclik3:hover,.oclik4:hover,.oclik5:hover,.oclik6:hover{
+	cursor : pointer;
+}
+
+#b1_contour:hover,#b2_contour:hover,#b3_contour:hover,#b4_contour:hover,#b5_contour:hover,#b6_contour:hover{
+	fill : #cce4f2;
+	cursor : pointer;
+}
+
+.default:hover{
+	cursor : pointer;
+}
+
+
+.clignote{
+	animation: cligne 1.5s linear;
+	animation-iteration-count : infinite;
+}
+
+.gonfle{
+	animation: gonfle 3s linear;
+	animation-iteration-count : infinite;
+}
+
+@keyframes gonfle {
+	0%   {transform: scale(1);
+		opacity : 1}
+    50%  {transform: scale(1.5);
+		opacity : 0.95}
+    100% {transform: scale(1);
+		opacity : 1}
+}
+
+@keyframes cligne {
+	0% {fill : #000000}
+	50% {fill : #cce4f2}
+	100% {fill : #000000}
+}
+
+#anime{
+	position : absolute;
+}
+.bouts{
+
+	border-style : solid;
+	border-width : 3px;
+	border-color : #FFFFFF;
+	border-radius: 20px;
+	padding: 6px 8px;
+	background: #f6e9d9;
+	color: #333333;
+	transition-duration:.2s;
+	transition-property: background;
+	-moz-transition-duration:.2s;
+	-moz-transition-property: background;
+	-webkit-transition-duration:.2s;
+	-webkit-transition-property: background;
+	font-family: WalbaumgrotBook, helvetica, arial, sans-serif;
+	font-size : 14px;
+	overflow : hidden;
+	z-index : 1;
+	position : absolute;
+}
+#init{
+	margin-left : 72%;
+	margin-top : 22%;
+	display: none;
+}
+.bouts:hover{
+	background: #be2e0d !important;
+	color: #ffffff !important;
+	cursor:pointer !important;
+}
+
+.on{
+	background: #333333 !important;
+}
+
+
+
+.debitGauche{
+	animation: tourneG 5s linear;
+	animation-iteration-count : infinite;
+}
+
+
+@keyframes tourneG {
+	from {transform: rotate(0deg);}
+	to   {transform: rotate(-360deg);}
+}
+
+#bouton_l{
+	border-radius : 20px;
+	width: 45px;
+	height: auto;
+	margin : auto;
+	padding : 4px 7px;
+}
+#bouton_0{
+	width : 300px;
+	height : 180px;
+	margin-top : 12%;
+	margin-left : -25%;
+	position : absolute;
+	border-radius: 70px;
+	font-size : 18px;
+	border-width:20px;
+	border-color : #FFFFFF;
+	opacity : 0.97;
+}
+
+#bydefault{
+	position : absolute;
+	z-index : 1;
+	width : 100%;
+	text-align : center;
+}
+
+#rules{
+	display : none;
+	position : absolute;
+	font-size : 18px;
+	width : 50%;
+	margin-left :18%;
+	margin-top :10%;
+	z-index : 0;
+}
