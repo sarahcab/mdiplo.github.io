@@ -1,0 +1,189 @@
+@font-face {
+    font-family: 'WalbaumgrotBook';
+    src:url("../ressources/polices/walbaumgroteskbook/WalbaumGroteskBook.otf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+body{
+	font-family: WalbaumgrotBook, helvetica, arial, sans-serif;
+
+}
+#line{
+	display : flex;
+}
+#pop{
+/* 	position : absolute;
+	margin-left : 23.3%;
+	margin-top : 12%; */
+/* 	background-color : #FFFFFF;
+	border-color : #B3D8ED;
+	border-style : solid; */
+	border-radius : 5px;
+	width : 20%;
+	padding : 5px;	
+}
+
+/* #anime{
+	border-left : solid #CCCCCC 2px;
+} */
+#svg{
+	width : 50px;
+	height : 50px;
+}
+
+#entete{
+	display: flex;
+	text-align : center;
+	flex-direction : row;
+	justify-content : space-between;
+}
+
+#txt{
+	height : auto;
+	margin-bottom : 0px;
+	font-size : 20px;
+	margin-top : 10%;
+	position : absolute;
+	width : 20%;
+}
+
+#plus{
+	position : relative;
+	font-size : 12px;
+	font-style : italic;
+}
+
+#espBoutons{
+	margin-top : 30%;
+}
+
+#alter,#possible{
+	margin-left : 5%;
+}
+
+#retour,#suite{
+	margin-top : 2.5%
+}
+
+#alter{
+	margin-top : 5%
+}
+
+#suite{
+	margin-left : 10%;
+}
+#debut{
+	margin-top : 43%;
+	margin-left : 8%;
+}
+
+
+/* 
+#alter,#possible, #debut,#retour{
+	display : none;
+}
+ */
+.rouge:hover{
+	background : #E30613 !important;
+	color: #FFFFFF !important;
+}
+
+.vert:hover{
+	background: #7FB029 !important;
+	color: #FFFFFF !important
+	
+}
+
+.bleu:hover{
+	background: #B3D8ED !important;
+}
+
+#retour:hover, #debut:hover{
+	background: #CCCCCC !important;
+	color: #ffffff !important
+}
+
+.bouts:hover{
+	cursor:pointer !important;
+}
+
+.bouts.on{
+	background: #333333;
+	color: #ffffff;
+}
+
+.bouts{
+	border: 0;
+	border-radius: 15px;
+	padding: 5px 10px;
+	background: #f6e9d9;
+	color: #333333;
+	height : 30px;
+	margin : 5px;
+	transition-duration:.2s;
+	transition-property: background;
+	-moz-transition-duration:.2s;
+	-moz-transition-property: background;
+	-webkit-transition-duration:.2s;
+	-webkit-transition-property: background;
+	font-family: WalbaumgrotBook, helvetica, arial, sans-serif;
+	font-size : 14px;
+	position : absolute;
+}
+
+#masque:hover{
+	cursor : pointer;
+}
+
+#sourcess{
+	position : absolute;
+	margin-top : 43%;
+	margin-left : 25%;
+}
+
+.coupeHaut{
+	animation: coupeD 3s linear;
+	animation-iteration-count : infinite;
+	/*transform-origin: 832.605px 329.171px;*/
+}
+.coupeBas{
+	animation: coupeG 3s linear;
+	animation-iteration-count : infinite;
+	/*transform-origin: 832.605px 329.171px;*/
+}
+.tourne{
+	animation: tourne 8s linear;
+	animation-iteration-count : infinite;
+	/*transform-origin: 832.605px 329.171px;*/
+}
+.tourne10{
+	animation: tourne10 1.5s linear;
+	/*transform-origin: 832.605px 329.171px;*/
+}
+
+@keyframes coupeD {
+	0% {transform: rotate(0deg);}
+	25% {transform: rotate(-15deg);}	
+	50% {transform: rotate(0deg);}
+	75% {transform: rotate(15deg);}
+	100% {transform: rotate(0deg);}
+}
+
+@keyframes coupeG {
+	0% {transform: rotate(0deg);}
+	25% {transform: rotate(15deg);}	
+	50% {transform: rotate(0deg);}
+	75% {transform: rotate(-15deg);}
+	100% {transform: rotate(0deg);}
+}
+
+@keyframes tourne {
+	from {transform: rotate(0deg);}
+	to {transform: rotate(360deg);}	
+}
+
+@keyframes tourne10 {
+	from {transform: rotate(-100deg);}
+	to {transform: rotate(0deg);}	
+}
