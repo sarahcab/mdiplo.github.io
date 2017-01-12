@@ -9,6 +9,8 @@
 			color: #333;
 			background-color: #ffffff;
 			overflow: hidden;
+			padding:10px;
+			margin:0;
 		}
 		a {
 		    color: #be2e0d;
@@ -22,28 +24,32 @@
 		}		
 		.entete .titre {
 		    color: #000000;
-		    line-height: 1.3em;
-		}
-		.titre {
+			position:relative;
+			padding:0;
+			margin:50px;
+			line-height: 0px;
 		    font-weight: 500;
 			display:block;
 			text-align:center;
 		}
 		.titre > .petit {
-		    font-size: 0.5em;
-		    right: 4.5em;
-		    top: 1em;
-		    position: relative;
+			display:block;
+			font-size:13px;
+			position:absolute;
+			left:231px;
+			top:-25px;
 		}
 		.titre > .gros {
-		 	font-size: 2em;
+		 	font-size: 70px;
 		}
 		.titre > .small-caps {
-		    font-variant: small-caps;
+			font-size:50px;
 		}
 		.titre > .plus_gros_ital {
 			font-style: italic;
-		 	font-size: 3em;
+		 	font-size: 100px;
+			display:block;
+			margin:45px;
 		}
 		
 		.column-main {
@@ -87,9 +93,25 @@
 		
 		/* Pour les téléphones */
 		@media (max-width:480px){
-			.entete {
-				font-size: 0.4em;
-			}
+
+		.titre > .petit {
+			font-size:6.5px;
+			position:absolute;
+			left:115.5px;
+			top:-12.5px;
+		}
+		.titre > .gros {
+		 	font-size: 35px;
+		}
+		.titre > .small-caps {
+			font-size:25px;
+		}
+		.titre > .plus_gros_ital {
+		 	font-size: 50px;
+			display:block;
+			margin:22.5px;
+		}
+
 			.qui {
 				display:block;
 			}
@@ -104,8 +126,9 @@
         <div class="entete">
             <a href="https://github.com/mdiplo">
                 <h1 class="titre">
-                    <span class="petit">LE</span><br>
-                    <span class="gros">M</span><span class="gros small-caps">onde</span><br /><span class="gros plus_gros_ital">diplomatique</span>
+                    <span class="petit">LE</span>
+					<span class="gros">M</span><span class="small-caps">ONDE</span>
+					<span class="gros plus_gros_ital">diplomatique</span>
                 </h1>
             </a>
         </div>
