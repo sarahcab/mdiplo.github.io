@@ -8,6 +8,7 @@
 		body{
 			color: #333;
 			background-color: #ffffff;
+			overflow: hidden;
 		}
 		a {
 		    color: #be2e0d;
@@ -21,29 +22,26 @@
 		}		
 		.entete .titre {
 		    color: #000000;
+		    line-height: 1.3em;
 		}
 		.titre {
 		    font-weight: 500;
-		    padding-left: 5em;
+			display:block;
+			text-align:center;
 		}
 		.titre > .petit {
 		    font-size: 0.5em;
-		    font-weight: 500;
-		    left: 0.9em;
-		    padding-left: 0.5ex;
+		    right: 4.5em;
+		    top: 1em;
 		    position: relative;
-		    top: 0.4em;
 		}
 		.titre > .gros {
-		    line-height: 0.5em;
 		 	font-size: 2em;
 		}
 		.titre > .small-caps {
 		    font-variant: small-caps;
 		}
-		.titre > .recule {
-		    position: relative;
-    		right: 1.6em;
+		.titre > .plus_gros_ital {
 			font-style: italic;
 		 	font-size: 3em;
 		}
@@ -90,11 +88,10 @@
 		/* Pour les téléphones */
 		@media (max-width:480px){
 			.entete {
-				font-size: 0.5em;
+				font-size: 0.6em;
 			}
-			.titre {
-		    	padding-left: 0em;
-		    	margin-left:6em;
+			.qui {
+				display:block;
 			}
 		}
 		
@@ -108,7 +105,7 @@
             <a href="https://github.com/mdiplo">
                 <h1 class="titre">
                     <span class="petit">LE</span><br>
-                    <span class="gros">M</span><span class="gros small-caps">onde</span><br /><span class="gros recule">diplomatique</span>
+                    <span class="gros">M</span><span class="gros small-caps">onde</span><br /><span class="gros plus_gros_ital">diplomatique</span>
                 </h1>
             </a>
         </div>
@@ -128,7 +125,7 @@
 
     <footer>
         <div class="credits column-main">
-            Page Github du Monde diplomatique. <a href="http://www.monde-diplomatique.fr/diplo/apropos/">Qui sommes-nous ?</a>
+            Page Github du Monde diplomatique. <a class="qui" href="http://www.monde-diplomatique.fr/diplo/apropos/">Qui sommes-nous ?</a>
         </div>
     </footer>
 </body>
