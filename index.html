@@ -39,10 +39,13 @@
 			left:231px;
 			top:-25px;
 		}
-		.titre > .gros {
+		.titre .moyen{
+			display:block;
+		}
+		.titre .gros {
 		 	font-size: 70px;
 		}
-		.titre > .small-caps {
+		.titre .small-caps {
 			font-size:50px;
 		}
 		.titre > .plus_gros_ital {
@@ -94,23 +97,23 @@
 		/* Pour les téléphones */
 		@media (max-width:480px){
 
-		.titre > .petit {
-			font-size:6.5px;
-			position:absolute;
-			left:115.5px;
-			top:-12.5px;
-		}
-		.titre > .gros {
-		 	font-size: 35px;
-		}
-		.titre > .small-caps {
-			font-size:25px;
-		}
-		.titre > .plus_gros_ital {
-		 	font-size: 50px;
-			display:block;
-			margin:22.5px;
-		}
+			.titre > .petit {
+			    font-size: 4.5px;
+			    left: 75px;
+			    position: absolute;
+			    top: -5px;
+			}
+			.titre .gros {
+			 	font-size: 20px;
+			}
+			.titre .small-caps {
+				font-size:15px;
+			}
+			.titre > .plus_gros_ital {
+			 	font-size: 30px;
+				display:block;
+				margin:20px;
+			}
 
 			.qui {
 				display:block;
@@ -127,7 +130,9 @@
             <a href="https://github.com/mdiplo">
                 <h1 class="titre">
                     <span class="petit">LE</span>
-					<span class="gros">M</span><span class="small-caps">ONDE</span>
+					<span class="moyen">
+						<span class="gros">M</span><span class="small-caps">ONDE</span>
+					</span>
 					<span class="gros plus_gros_ital">diplomatique</span>
                 </h1>
             </a>
