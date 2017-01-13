@@ -1,0 +1,6 @@
+.carte{
+	background-image: url("../img/fond_de_carte.png");
+	background-repeat : no-repeat;
+	position: absolute;
+}
+
