@@ -15,13 +15,43 @@ var possible = document.getElementById("possible");
 var suite = document.getElementById("suite");
 var retour = document.getElementById("retour");
 var masque = document.getElementById("masque");
+var init = document.getElementById("init"); 
+var bout_0 = document.getElementById("bouton_0"); //bouton "démarrer"
+var bout_l = document.getElementById("bouton_l"); //bouton "démarrer"
 
 window.onload = function(){
 	initialize();
  }
 
+function initialize(){
+	bout_l.onclick = function(){			
+		//d3.select("#rules").style("display", "none")
+		d3.select("#rules").transition().duration(1000).style("margin-top","500px").style("font-size", "14px").selectAll("p").style("margin","0px")
+		d3.select("#rules").transition().delay(1000).style("margin-top","43%").style("width","78%").style("text-align","right").style("margin-left","18%");
+		d3.select("#rules").selectAll("img").transition().duration(1000).style("width","15px"); //réduction de la police des règles
+		d3.select("#bydefault").transition().delay(1000).style("display","none")
+		this.style.display = "none";
+		d3.select("#pop").transition().duration(500).style("opacity",1);
+		reseet();
+		
+		affiche("");
+		setTimeout(function(){
+			maj();
+			affiche("");
+		}, 1000);
+		buildTimeLine();		
+	}
+	
+	bout_0.onclick = function(){
+		this.style.display = "none"; 
+		d3.select("#rules").style("display","block");
+		
+	}
+	
+}
  //fonction princiaple
-function initialize() {	
+function reseet() {	
+
 	alter.onclick = function(){
 		sens = "false";
 		if(document.getElementById("chemb"+ind)){
@@ -54,7 +84,12 @@ function initialize() {
 		sens = "true";
 		etape = etape -2;
 		maj();
-		affiche(ancChoix);
+		if(document.getElementById("chema"+ind)){
+			affiche("a");
+		}else {
+			affiche("");
+		}
+		
 		//majFenetre();
 	}
 	masque.onclick=function(){
@@ -90,14 +125,30 @@ function initialize() {
 		}	
 	}
 	
-	affiche("");
-	setTimeout(function(){
-		maj();
-		affiche("");
-	}, 1000);	
+	init.onclick =function(){
+		zero();
+		d3.select("#timeLine").selectAll("*").remove();
+		d3.select("#defaut").transition().duration(500).attr("opacity",1)
+		setTimeout(function(){
+			affiche("");
+			buildTimeLine();	
+		},1000);
+		setTimeout(function(){
+			maj();
+			affiche("");
+		}, 2000);
+	}
+	d3.select("#defaut").transition().duration(700).attr("opacity",1)
+}
+
+function zero(){
+	etape = -1;
+	ind="-1";	
 	
-	buildTimeLine();
-	
+	d3.select("#anime").selectAll(".opa02").transition().duration(1000).attr("opacity",0.02)
+	d3.select("#anime").selectAll(".opa0").transition().duration(1000).attr("opacity",0)
+	d3.select("#anime").selectAll(".opa01").transition().duration(1000).attr("opacity",0.1)
+	d3.select("#anime").selectAll(".stroked").transition().duration(1000).attr("stroke-dasharray","0,300")
 }
 
 function maj(){	
@@ -117,8 +168,7 @@ function maj(){
 }
 
 function affiche(choix){
-	ancChoix = choix;
-
+	
 	/////////////////////sur le dessin	
 	d3.select("#contour_alter").selectAll("path").transition().duration(500).attr("stroke","#FFFFFF").attr("stroke-width","1.417");
 	d3.select("#chemins_contour").selectAll("path").transition().duration(500).attr("stroke","#FFFFFF").attr("stroke-width","1.417");
@@ -181,13 +231,15 @@ function affiche(choix){
 	d3.select("#plus").html(texte2);
 	d3.select(".dessinT").html(dessin).attr("transform", "translate(-"+centreX+",-"+centreY+")");
 	
-	////timeLine
-	if(sens=="true"){
+	////timeLine et contour
+	if(sens=="true"){	
+	//alert("#cont"+ancChoix+test)
 		d3.select("#tx"+test).attr("class","bougeT tx")
 		d3.select("#trait"+test).attr("class","bougeR indT")
 		d3.select("#bloc"+test).attr("class","bougeC elt")
 		d3.select("#blocb"+test).attr("class","bougeC elt altern")
-	}
+		d3.select("#cont"+ancChoix+test).transition().duration(600).attr("opacity",0);
+	} 
 	//cercles : initialements ils étaient tous dans des mêmes classes, et on les bougeait avec transform scale. Mais cest mieux en bougeant leurs attributs
 	d3.select("#timeLine").selectAll(".elt").attr("fill","#f6e9d9").attr("r",tll/2).attr("font-size",10).attr("cy",tll*2);
 	d3.select("#timeLine").selectAll(".altern").attr("cy",tll*3);
@@ -325,6 +377,26 @@ function affiche(choix){
 	majBout(choix);
 	
 	/////////////////////exceptions
+	if(ind=="00"){
+		var texte2 = "";
+		d3.select("#texte-1").html(function(){
+			var val = this.innerHTML;
+			texte2 = texte2 +" "+ val;
+			return val;
+		})
+		d3.select("#plus").html(texte2);
+	}
+	if(ind=="-1"){
+		for(i=1;i<8;i++){
+			d3.select("#b"+i).attr("transform", function(){
+				var cx = this.attributes.cx.value;
+				var cy = this.attributes.cy.value;
+				return "translate("+cx+","+cy+") scale(0)";
+			})
+			.transition().duration(1000).attr("transform","")
+		}
+		
+	}
 	if(ind=="16"){
 		d3.select("body").selectAll(".haut")
 			.attr("class","haut coupeHaut")
@@ -402,6 +474,8 @@ function affiche(choix){
 	if(etape=="02"){
 		d3.select("#dessin02").attr("transform","translate(-20)").attr("opacity",0).transition().duration(1000).attr("transform","").attr("opacity",1)
 	}
+	
+	ancChoix = choix;
 }
 
 function majBout(choix){
@@ -463,10 +537,10 @@ function majBout(choix){
 			.attr("id","cachePossible")
 	}
 	if(etape<=0){
-		debut.style.display = "none";
+		init.style.display = "none";
 		retour.style.display = "none";
 	} else {
-		debut.style.display = "inline";
+		init.style.display = "inline";
 		retour.style.display = "inline";
 	}
 }
