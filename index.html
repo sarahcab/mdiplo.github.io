@@ -1,2 +1,160 @@
-<h1>Le Monde diplomatique</h1>
-<small>Sur Github</small>
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Le Monde diplomatique</title>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+		body{
+			color: #333;
+			background-color: #ffffff;
+			overflow: hidden;
+			padding:10px;
+			margin:0;
+		}
+		a {
+		    color: #be2e0d;
+		}
+		.entete {
+		    display: flex;
+		    justify-content: center;
+		}
+		.entete > a {
+		    text-decoration: none;
+		}		
+		.entete .titre {
+		    color: #000000;
+			position:relative;
+			padding:0;
+			margin:50px;
+			line-height: 0px;
+		    font-weight: 500;
+			display:block;
+			text-align:center;
+		}
+		.titre > .petit {
+			display:block;
+			font-size:13px;
+			position:absolute;
+			left:231px;
+			top:-25px;
+		}
+		.titre .moyen{
+			display:block;
+		}
+		.titre .gros {
+		 	font-size: 70px;
+		}
+		.titre .small-caps {
+			font-size:50px;
+		}
+		.titre > .plus_gros_ital {
+			font-style: italic;
+		 	font-size: 100px;
+			display:block;
+			margin:45px;
+		}
+		
+		.column-main {
+		    margin-left: auto;
+		    margin-right: auto;
+		    max-width: 60em;
+		}
+
+		.credits {
+		    border-top: 2px solid #ccc;
+		    padding: 0.75em;
+		    text-align: center;
+		}
+		
+		.sh {
+		    margin-bottom: 2.8em;
+		    margin-top: 0.8em;
+		    padding: 1em;
+		    position: relative;
+		    background-color: #073642;
+		}
+		
+		pre, code {
+		    display: block;
+		    margin: 0;
+			padding:0;
+		}
+		pre {
+			line-height:0.5em;
+		}
+		code {
+		    color: #839496;
+		  	font-family: "Menlo","Monaco",monospace;
+		    font-size: 16px;
+		    text-align: left;
+		}
+		pre > code::before, .sh > code::before {
+		    content: "$ ";
+		}
+		
+		
+		/* Pour les téléphones */
+		@media (max-width:480px){
+
+			.titre > .petit {
+			    font-size: 4.5px;
+			    left: 75px;
+			    position: absolute;
+			    top: -5px;
+			}
+			.titre .gros {
+			 	font-size: 20px;
+			}
+			.titre .small-caps {
+				font-size:15px;
+			}
+			.titre > .plus_gros_ital {
+			 	font-size: 30px;
+				display:block;
+				margin:20px;
+			}
+
+			.qui {
+				display:block;
+			}
+		}
+		
+		
+	</style>
+</head>
+<body>
+
+    <header>
+        <div class="entete">
+            <a href="https://github.com/mdiplo">
+                <h1 class="titre">
+                    <span class="petit">LE</span>
+					<span class="moyen">
+						<span class="gros">M</span><span class="small-caps">ONDE</span>
+					</span>
+					<span class="gros plus_gros_ital">diplomatique</span>
+                </h1>
+            </a>
+        </div>
+    </header>
+
+    <div class="page">
+
+            <section class="column-main">
+            	<div class="sh">
+                	<pre>
+						<code>echo "Hello world."</code>
+					</pre>
+            	</div>
+            </section>
+
+    </div>
+
+    <footer>
+        <div class="credits column-main">
+            Page Github du Monde diplomatique. <a class="qui" href="http://www.monde-diplomatique.fr/diplo/apropos/">Qui sommes-nous ?</a>
+        </div>
+    </footer>
+</body>
+</html>
