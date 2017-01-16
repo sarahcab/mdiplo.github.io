@@ -52,7 +52,7 @@ function initialize(cap) {
 	
 	//Création des éléments audio
 	for(h=0;h<listeNoeuds.length;h++){
-		d3.select("body").append("audio").attr("id","audio_"+listeNoeuds[h]).append("source").attr("src", "audio/"+listeNoeuds[h]+".WAV")
+		d3.select("body").append("audio").attr("id","audio_"+listeNoeuds[h]).append("source").attr("src", "audio/"+listeNoeuds[h]+".wav")
 	}
 	
 	for(i=0; i<robi.length; i++){	
@@ -99,7 +99,7 @@ function initialize(cap) {
 		
 		var tps = 7000;
 		var ind = 0;
-		d3.select("body").append("audio").attr("id","audio_zero").append("source").attr("src", "audio/zero.WAV")
+		d3.select("body").append("audio").attr("id","audio_zero").append("source").attr("src", "audio/zero.wav")
 		document.getElementById("audio_zero").play();
 		d3.select("#periscope").transition().duration(500).attr("opacity", 1)
 		
