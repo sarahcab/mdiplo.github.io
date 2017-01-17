@@ -1,0 +1,156 @@
+@font-face {
+    font-family: 'WalbaumgrotBook';
+    src:url("../../ressources/polices/Roboto-Light.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+body{
+	font-family: WalbaumgrotBook, helvetica, arial, sans-serif;
+}
+
+.rob:hover{
+	opacity : 0.5
+}
+
+#images{
+	position : relative;
+	height : 890px;
+	width : 1190px
+}
+
+#vitesse{
+	margin-left : 20px;
+}
+
+.debit{
+	stroke-linecap : round ;
+	opacity : 0.2;
+	stroke-dasharray: 0,100;
+	animation: dash 5s linear;
+	stroke-dashoffset: 300;
+	animation-iteration-count : infinite;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+#anime{
+	position : absolute;
+}
+
+#divChoix{
+	position : absolute ; 
+	display : none; 
+	width : 1100px;
+	height : 100px;
+	padding : 30px;
+	background-color : #FFFFFF;
+	border : red;
+}
+
+.boutPlus, .boutCont, .boutDebut,.boutLegende, #affMode, #bou_ex{
+	padding-left : 0px;
+	border: 0;
+	border-radius: 15px;
+	padding: 5px 7px;
+	background: #f6e9d9;
+	color: #333333;
+	transition-duration:.2s;
+	transition-property: background;
+	-moz-transition-duration:.2s;
+	-moz-transition-property: background;
+	-webkit-transition-duration:.2s;
+	-webkit-transition-property: background;
+	font-family: WalbaumgrotBook, helvetica, arial, sans-serif;
+	font-size : 14px;
+}
+
+
+
+.boutPlus:hover, .boutCont:hover, .boutDebut:hover, #affMode:hover{
+	background: #be2e0d !important;
+	color: #ffffff !important;
+	cursor:pointer !important;
+}
+
+.boutPlus{
+	margin-left : 10.2px;
+	opacity : 0.5;
+}
+
+.boutCont{
+	position : absolute;
+	display : none;
+	
+}
+
+.boutDebut{
+	width : 200px;
+	margin : auto;
+}
+
+.on{
+	background: #333333;
+	color: #ffffff;
+}
+
+#divChoix2{
+	margin-top : 420px; 
+	padding-top: 35px;
+	padding-bottom: 32px;
+	margin-left : 462px; 
+	position : absolute;
+	width : 400px;
+}
+
+#explications1{
+	margin-left : 40px;
+}
+
+#explications2{
+	margin-left : 702px;
+	height : 150px;
+	text-align : center;
+}
+
+#explications2,#explications1{
+	padding : 6px;
+	margin-top : 40px; 
+	position : absolute;	
+	width : 445px;
+}
+
+p, h1{
+	margin : 0;
+}
+
+#all{
+	width : 90%;
+	margin : auto;
+}
+
+#images, #conteneur, #textes_bouts, #Capital{
+	width : 100px;
+}
+
+#modedEmploi{
+	display : none;
+	color : #B51808;
+	font-size : 14px;
+	width : 420px;
+}
+
+#affMode{
+	display : none;
+	margin : 10px;
+}
+
+.indicPlus{
+	color : #B51808;
+	font-size : 14px;
+}
